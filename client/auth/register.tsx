@@ -12,7 +12,12 @@ type RegisterState = {
 };
 
 export class Register extends React.Component<{}, RegisterState> {
-    state: RegisterState;
+    state: RegisterState = {
+        password: null,
+        confirmPassword: null,
+        success: null,
+        error: null
+    };
 
     constructor(props: {}) {
         super(props);
