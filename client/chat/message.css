@@ -1,0 +1,29 @@
+.message {
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 25px 1fr;
+    grid-template-columns: 100px 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.message .message-header {
+    background: #fff;
+    border-radius: 3px;
+    padding: 5px;
+    grid-column: span 2;
+}
+
+.message .message-avatar {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #9b9b9b;
+    border-radius: 3px;
+}
+
+.message .message-core {
+    border: 1px dashed #fff;
+    padding: 20px;
+    border-radius: 3px;
+    background: #fff4;
+}

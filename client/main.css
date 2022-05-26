@@ -1,0 +1,121 @@
+html * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: #505050;
+	user-select: none;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #505050;
+}
+
+body {
+	background-color: #b6c0d3;
+}
+
+#root {
+	height: 100%;
+}
+
+/* BUTTONS */
+
+button,
+a.button,
+input,
+select {
+	background: #efefef;
+	border: 1px solid #9b9b9b;
+	border-radius: 3px;
+	padding: 5px;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+}
+
+a.button {
+	text-align: center;
+}
+
+button:active,
+a.button:active,
+input[type=submit]:active,
+input[type=button]:active {
+	box-shadow: inset #8b8b8b 0px 2px 5px 0px;
+}
+
+/* FORMS */
+
+.hplns-form {
+	background: #fff6;
+	border: 3px double #fff7;
+	border-radius: 3px;
+	padding: 25px 25px 15px;
+	box-shadow: initial;
+	user-select: none;
+}
+
+.hplns-form .error {
+	border: 1px solid #ff0000;
+	border-radius: 3px;
+	padding: 5px;
+	color: #ff0000;
+	background: #ffe9e9;
+	margin-bottom: 15px;
+}
+
+.hplns-form input,
+.hplns-form select {
+	width: 100%;
+}
+
+.hplns-form input:invalid {
+	border-color: #ff0000;
+	background: #ffe9e9;
+}
+
+.hplns-form input[type=submit] {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.hplns-form-field {
+	margin-bottom: 10px;
+}
+
+.hplns-form-field label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+/* TEXT */
+
+.hplns-text-small {
+	font-size: 12px;
+	margin: 12px 0;
+}
+
+.hplns-text-medium {
+	font-size: 14px;
+}
+
+.hplns-text-large {
+	font-size: 16px;
+}
+
+.hplns-text-left {
+	text-align: left;
+}
+
+.hplns-text-center {
+	text-align: center;
+}
+
+.hplns-text-right {
+	text-align: right;
+}

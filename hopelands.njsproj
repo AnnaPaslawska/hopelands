@@ -1,0 +1,162 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>hopelands</Name>
+    <RootNamespace>hopelands</RootNamespace>
+    <EnableTypeScript>true</EnableTypeScript>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>1d963960-80c7-42c4-8e92-bbf6494f2a5b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>8080</NodejsPort>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".env" />
+    <Content Include="client\auth\login.css" />
+    <Content Include="client\auth\register.css" />
+    <Content Include="client\chat\chat.css" />
+    <Content Include="client\chat\message.css" />
+    <Content Include="client\chat\messageForm.css" />
+    <Content Include="client\chat\messageWindow.css" />
+    <Content Include="client\chat\messageWindow.tsx" />
+    <Content Include="client\loading\loading.css" />
+    <Content Include="client\main.css" />
+    <Content Include="client\nav\nav.css" />
+    <Content Include="client\noPage.css" />
+    <Content Include="client\sessions\sessionList.css" />
+    <Content Include="client\sessions\session.css" />
+    <Content Include="client\sessions\sessionProperties.css" />
+    <Content Include="client\sessions\sessions.css" />
+    <Content Include="config\auth.config.js" />
+    <Content Include="config\db.config.js" />
+    <Content Include="controllers\auth.controller.js" />
+    <Content Include="controllers\post.controller.js" />
+    <Content Include="controllers\session.controller.js" />
+    <Content Include="controllers\user.controller.js" />
+    <Content Include="dist\app-bundle.js" />
+    <Content Include="dist\app-bundle.js.map" />
+    <Content Include="index.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="middlewares\authJwt.js" />
+    <Content Include="middlewares\index.js" />
+    <Content Include="middlewares\verifySignup.js" />
+    <Content Include="models\index.js" />
+    <Content Include="models\post.model.js" />
+    <Content Include="models\role.model.js" />
+    <Content Include="models\session-mg.model.js" />
+    <Content Include="models\session-player.model.js" />
+    <Content Include="models\session.model.js" />
+    <Content Include="models\user.model.js" />
+    <Content Include="routes\auth.routes.js" />
+    <Content Include="routes\post.routes.js" />
+    <Content Include="routes\session.routes.js" />
+    <Content Include="routes\user.routes.js" />
+    <Content Include="server.js" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="tsconfig.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="utils.js" />
+    <Content Include="webpack-config.js">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="client\app.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="client\auth\login.tsx" />
+    <TypeScriptCompile Include="client\auth\register.tsx" />
+    <TypeScriptCompile Include="client\chat\chat.tsx" />
+    <TypeScriptCompile Include="client\chat\message.tsx" />
+    <TypeScriptCompile Include="client\chat\messageForm.tsx" />
+    <TypeScriptCompile Include="client\loading\loading.tsx" />
+    <TypeScriptCompile Include="client\nav\nav.tsx" />
+    <TypeScriptCompile Include="client\noPage.tsx" />
+    <TypeScriptCompile Include="client\sessions\sessionList.tsx" />
+    <TypeScriptCompile Include="client\sessions\session.tsx" />
+    <TypeScriptCompile Include="client\sessions\sessionProperties.tsx" />
+    <TypeScriptCompile Include="client\sessions\sessions.tsx" />
+    <TypeScriptCompile Include="client\utils\common.tsx" />
+    <TypeScriptCompile Include="client\utils\types.tsx" />
+    <TypeScriptCompile Include="client\utils\withRouter.tsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="client\chat\" />
+    <Folder Include="client\auth\" />
+    <Folder Include="client\nav\" />
+    <Folder Include="client\loading\" />
+    <Folder Include="client\sessions\" />
+    <Folder Include="client\settings\" />
+    <Folder Include="client\utils\" />
+    <Folder Include="config\" />
+    <Folder Include="controllers\" />
+    <Folder Include="dist\" />
+    <Folder Include="middlewares\" />
+    <Folder Include="models\" />
+    <Folder Include="client\" />
+    <Folder Include="routes\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

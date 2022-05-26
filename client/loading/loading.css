@@ -1,0 +1,58 @@
+@keyframes spin {
+    0% {
+        transform: translateX(-50%) rotate(0);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8b8b8b;
+    border-radius: 5px;
+    background: #fff5;
+}
+
+.loading-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-image {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.loading-image::before,
+.loading-image::after {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    border-radius: 30px;
+    border: 3px solid;
+    transform: translateX(-50%);
+}
+
+.loading-image::before {
+    border-color: #b6c0d3;
+}
+
+.loading-image::after {
+    border-color: transparent;
+    border-top-color: #8b8b8b;
+    transform-origin: center;
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+
+}

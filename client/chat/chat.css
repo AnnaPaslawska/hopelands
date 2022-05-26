@@ -1,0 +1,9 @@
+/* CHAT */
+
+.chat-window {
+    grid-area: chat;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    overflow: hidden;
+}

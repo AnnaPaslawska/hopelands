@@ -1,0 +1,24 @@
+.session-list {
+    grid-area: sessionList;
+    padding: 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.session-list ul {
+    list-style-type: none;
+}
+
+.session-list ul li:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.session-list button {
+    word-break: break-all;
+    width: 100%;
+}
+
+.session-list .action {
+    background: #a2cdac;
+}

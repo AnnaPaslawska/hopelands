@@ -1,0 +1,45 @@
+.message-form {
+    display: grid;
+    grid-template-columns: 1fr 10%;
+    align-items: center;
+    justify-items: center;
+}
+
+.message-form textarea {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #9b9b9b;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 14px;
+    resize: none;
+}
+
+.message-submit {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.message-submit .checkbox {
+    appearance: none;
+    height: 30px;
+    background: #efefef;
+    color: #505050;
+    border-radius: 0 3px 3px 0;
+    border-left: none;
+}
+
+.message-submit .checkbox:checked {
+    background: #a2cdac;
+}
+
+.message-submit .checkbox:after {
+    content: '\21b2'
+}
+
+.message-submit .button {
+    height: 30px;
+    border-radius: 3px 0 0 3px;
+}

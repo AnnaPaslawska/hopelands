@@ -1,0 +1,9 @@
+.sessions {
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+        'nav nav'
+        'sessionList chat';
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 50px 1fr;
+}

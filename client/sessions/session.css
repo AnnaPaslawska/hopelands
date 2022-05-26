@@ -1,0 +1,20 @@
+.session-item {
+	position: relative;
+}
+
+.session-item .button {
+	position: relative;
+	width: 100%;
+}
+
+.session-item .drop-down {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 100%;
+}
+
+.session-item .drop-down option {
+	position: absolute;
+}

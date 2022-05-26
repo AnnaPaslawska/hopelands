@@ -1,0 +1,10 @@
+.message-window {
+    border: 1px solid #8b8b8b;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 5px;
+}
+
+.message-window ul {
+    list-style-type: none;
+}
